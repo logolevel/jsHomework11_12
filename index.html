@@ -7,30 +7,87 @@
 </head>
 <body>
 	<div class="container">
-	<div id="carousel">
-		<div class="carousel-arrow-left"><span>Влево</span></div>
-		<div class="carousel-hider">
-			<ul class="carousel-list">
-				<li class="carousel-element"><img src="img/image2.jpeg" alt=""><p>Описание 2</p></li>
-				<li class="carousel-element"><img src="img/image1.jpeg" alt=""><p>Описание 1</p></li>
-				<li class="carousel-element"><img src="img/image3.jpg" alt=""><p>Описание 3</p></li>
-				<li class="carousel-element"><img src="img/image4.jpg" alt=""><p>Описание 4</p></li>
-				<li class="carousel-element"><img src="img/image5.jpg" alt=""><p>Описание 5</p></li>
-				<li class="carousel-element"><img src="img/image6.jpg" alt=""><p>Описание 6</p></li>
-				<li class="carousel-element"><img src="img/image7.jpg" alt=""><p>Описание 7</p></li>
-				<li class="carousel-element"><img src="img/image8.jpg" alt=""><p>Описание 8</p></li>
-				<li class="carousel-element"><img src="img/image9.jpg" alt=""><p>Описание 9</p></li>
-				<li class="carousel-element"><img src="img/image10.jpg" alt=""><p>Описание 10</p></li>
-				<li class="carousel-element"><img src="img/image11.jpg" alt=""><p>Описание 11</p></li>
-				<li class="carousel-element"><img src="img/image12.jpg" alt=""><p>Описание 12</p></li>
+		<div id="carousel">
+			<div class="carousel-arrow-left"><span>Влево</span></div>
+			<div class="carousel-hider">
+				<ul class="carousel-list">
+					<li class="carousel-element"><img src="img/image1.jpeg" alt=""><p>Описание 2</p></li>
+					<li class="carousel-element"><img src="img/image2.jpeg" alt=""><p>Описание 1</p></li>
+					<li class="carousel-element"><img src="img/image3.jpg" alt=""><p>Описание 3</p></li>
+					<li class="carousel-element"><img src="img/image4.jpg" alt=""><p>Описание 4</p></li>
+					<li class="carousel-element"><img src="img/image5.jpg" alt=""><p>Описание 5</p></li>
+					<li class="carousel-element"><img src="img/image6.jpg" alt=""><p>Описание 6</p></li>
+					<li class="carousel-element"><img src="img/image7.jpg" alt=""><p>Описание 7</p></li>
+					<li class="carousel-element"><img src="img/image8.jpg" alt=""><p>Описание 8</p></li>
+					<li class="carousel-element"><img src="img/image9.jpg" alt=""><p>Описание 9</p></li>
+					<li class="carousel-element"><img src="img/image10.jpg" alt=""><p>Описание 10</p></li>
+					<li class="carousel-element"><img src="img/image11.jpg" alt=""><p>Описание 11</p></li>
+					<li class="carousel-element"><img src="img/image12.jpg" alt=""><p>Описание 12</p></li>
+				</ul>
+			</div>
+			<div class="carousel-arrow-right"><span>Вправо</span></div>
+		</div><!-- end #carousel -->
+
+		<div class="clearfix"></div>
+
+<!-- <script type="text/template" id="test">
+	<% for (var i = 0; i < data.length; i++) {  %>
+		<h1><%= data[i].title %></h1>
+		<p><%= data[i].content %></p>
+	<% } %>
+</script> -->
+
+
+<script type="text/template" id="test">
+	<% for (var i = 0; i < data.length; i++) {  %>
+	<div class="content">
+		<section class="main-title">
+			<div class="resume-title">
+				<h1><%= data[i].title %></h1>	
+				<div class="photo-wrapper">
+					<img src="<%= data[i].photo %>" alt="Моё фото">
+				</div>
+			</div>
+			<p><%= data[i].content %></p>
+		</section>
+		<section>
+			<p>Хочу учить фронтенд потому-что:</p>
+			<ul>
+				<li><%= data[i].motivationOne %>
+				</li>
+				<li><%= data[i].motivationTwo %></li>
+				<li><%= data[i].motivationThree %></li>
 			</ul>
-		</div>
-		<div class="carousel-arrow-right"><span>Вправо</span></div>
-	</div><!-- end #carousel -->
-	</div><!-- end container -->
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  -->
-	<script src="libs/jquery/jquery.min.js"></script>
-	<script src="libs/carousel/slider.jquery.js"></script>
-	<script src="js/script.js"></script>
+		</section>
+		<section>
+			<p>
+				<ul>
+					<li>Мой контактный телефон:</li>
+					<li><%= data[i].phone %></li>
+					<li>Мой профиль в фейсбук:</li>
+					<li><a href=#><%= data[i].social %></a></li>
+				</ul>
+			</p>
+		</section>
+		<section>
+			<p>
+				<ul>
+					<li>Моё хобби:</li>
+					<li><%= data[i].hobby %></li>
+				</ul>
+			</p>
+		</section>
+	</div><!-- enf container -->
+
+	<% } %>
+</script>
+
+
+</div><!-- end container -->
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>  -->
+<script src="libs/jquery/jquery.min.js"></script>
+<script src="libs/carousel/slider.jquery.js"></script>
+<script src="libs/tmpl/tmpl.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
